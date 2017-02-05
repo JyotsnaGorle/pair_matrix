@@ -1,0 +1,21 @@
+head
+  title bleh
+  link(href="styles/main.css" rel="stylesheet")
+  script(type="javascript" src="scripts/index.js")
+
+mixin people(alignment)
+  ul.people(class = alignment)
+    +person("img")
+    +person("img2")
+    +person("img3")
+
+mixin person(img)
+  li.person
+    img(src="assets/"+img+".jpg" width= 100 height=100)
+
+body
+  .head-row
+    +people("row")
+  .head-col
+    +people("col")
+

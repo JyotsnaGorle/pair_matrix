@@ -1,0 +1,13 @@
+body {
+  background: lightyellow; }
+
+ul.row li {
+  display: inline-block;
+  padding: 10px; }
+
+ul.col li {
+  padding: 10px;
+  display: block; }
+
+.person img {
+  border-radius: 50px; }
