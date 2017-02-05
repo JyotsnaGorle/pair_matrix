@@ -24,4 +24,11 @@ gulp.task("sass", function () {
     .pipe(browsersync.reload({stream: true}));
 });
 
+gulp.task("watch", function () {
+  gutil.log("watching");
+  gulp.watch("src/**/*.jade", ["jade"]);
+  gulp.watch("src/assets/styles/**/*.sass", ["sass"]);
+  gulp.watch("src/assets/scripts/*.js", ["copy"]);
+});
+
 

@@ -8,4 +8,4 @@ var gulp = require("gulp"),
 var reqDir = require("require-dir");
 reqDir("./build");
 
-gulp.task("default",["compile","serve", "copy"]);
+gulp.task("default",["compile", "copy", "serve", "watch"]);
