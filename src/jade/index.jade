@@ -1,7 +1,6 @@
 head
   title bleh
   link(href="styles/main.css" rel="stylesheet")
-  script(type="javascript" src="scripts/index.js")
 
 mixin people(alignment)
   ul.people(class = alignment)
@@ -18,4 +17,6 @@ body
     +people("row")
   .head-col
     +people("col")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+  script(type="text/javascript" src="scripts/index.js")
 
