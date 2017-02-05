@@ -5,7 +5,7 @@ var gulp = require("gulp"),
   browsersync = require('browser-sync'),
   livereload  = require("gulp-livereload");
 
-gulp.task("compile", ["jade","sass"]);
+gulp.task("compile", ["jade","sass", "scripts"]);
 
 
 gulp.task("jade", function () {
@@ -24,11 +24,16 @@ gulp.task("sass", function () {
     .pipe(browsersync.reload({stream: true}));
 });
 
+gulp.task("scripts", function () {
+  return gulp.src("src/scripts/*.js")
+    .pipe(gulp.dest('./output/scripts'))
+});
+
 gulp.task("watch", function () {
   gutil.log("watching");
   gulp.watch("src/**/*.jade", ["jade"]);
   gulp.watch("src/assets/styles/**/*.sass", ["sass"]);
-  gulp.watch("src/assets/scripts/*.js", ["copy"]);
+  gulp.watch("src/scripts/*.js", ["scripts"]);
 });
 
 

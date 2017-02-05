@@ -1,4 +1,3 @@
-alert("do");
 (function($){
   $(".person").click(function () {
     alert("clicked");
